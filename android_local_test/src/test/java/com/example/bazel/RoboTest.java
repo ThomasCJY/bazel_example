@@ -13,6 +13,6 @@ public class RoboTest {
     @Test
     public void justSimpleTest() {
         String result = PhoneNumberUtils.formatNumber("5467894545", "US");
-        Assert.assertEquals("5467894545", result);
+        Assert.assertEquals("(546) 789-4545", result);
     }
 }
