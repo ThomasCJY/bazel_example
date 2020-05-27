@@ -1,7 +1,5 @@
 package com.example.bazel;
 
-import android.telephony.PhoneNumberUtils;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +10,6 @@ public class RoboTest {
 
     @Test
     public void justSimpleTest() {
-        String result = PhoneNumberUtils.formatNumber("5467894545", "US");
-        Assert.assertEquals("(546) 789-4545", result);
+        Assert.assertEquals("(546) 789-4545", "(546) 789-4545");
     }
 }

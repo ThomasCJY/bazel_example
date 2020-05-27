@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="robolectric-4.1_9add8f22">
-    <CLASSES>
-      <root url="jar:///private/var/tmp/_bazel_jchen/0f8337efc7290202461be411a0f2bc48/execroot/__main__/bazel-out/darwin-fastbuild/bin/external/maven/v1/https/repo1.maven.org/maven2/org/robolectric/robolectric/4.1/robolectric-4.1.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

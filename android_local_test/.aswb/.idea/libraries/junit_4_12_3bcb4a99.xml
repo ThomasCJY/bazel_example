@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="junit-4.12_3bcb4a99">
-    <CLASSES>
-      <root url="jar:///private/var/tmp/_bazel_jchen/0f8337efc7290202461be411a0f2bc48/execroot/__main__/bazel-out/darwin-fastbuild/bin/external/maven/v1/https/repo1.maven.org/maven2/junit/junit/4.12/junit-4.12.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

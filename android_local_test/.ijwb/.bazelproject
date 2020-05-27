@@ -6,6 +6,8 @@ derive_targets_from_directories: true
 
 targets:
   # If source code isn't resolving, add additional targets that compile it here
+  //src/test:main_activity_test
+  //src/main:my_lib
 
 additional_languages:
   # Uncomment any additional languages you want supported

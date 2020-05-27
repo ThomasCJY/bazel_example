@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="jdk_compiler_362444fa">
-    <CLASSES>
-      <root url="jar:///private/var/tmp/_bazel_jchen/0f8337efc7290202461be411a0f2bc48/execroot/__main__/external/remote_java_tools_darwin/java_tools/jdk_compiler.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
