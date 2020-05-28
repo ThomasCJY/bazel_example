@@ -1,14 +1,13 @@
-java_library(
-    name = "test_test_resources",
-    resources = ["resources/robolectric.properties"],
-)
+load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
 
-java_library(
-    name = "java_tests",
+kt_jvm_library(
+    name = "java_kt_tests",
     srcs = [
         "java/com/example/bazel/RoboTest.java",
+        "java/com/example/bazel/SimpleJunitTest.java",
         "java/com/example/bazel/BazelTestSuite.java",
-        ],
+        "java/com/example/bazel/KotlinTest.kt",
+    ],
     deps = [
         "//src/main:test_lib",
         "@maven//:junit_junit",
@@ -19,12 +18,18 @@ java_library(
     ],
 )
 
+java_library(
+    name = "test_test_resources",
+    resources = ["resources/robolectric.properties"],
+)
+
+
 android_local_test(
     name = "main_activity_test",
     custom_package = "com.example.bazel",
     manifest = "AndroidManifest.xml",
     test_class = "com.example.bazel.BazelTestSuite",
-    runtime_deps = [":java_tests"],
+    runtime_deps = [":java_kt_tests"],
     deps = [
         ":test_test_resources",
         "@maven//:junit_junit",

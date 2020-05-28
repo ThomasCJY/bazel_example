@@ -6,10 +6,11 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 
 @RunWith(RobolectricTestRunner.class)
-public class RoboTest {
+public class SimpleJunitTest {
 
     @Test
-    public void justSimpleTest() {
-        Assert.assertEquals("(546) 789-4545", "(546) 789-4545");
+    public void testSimpleAdd() {
+        Assert.assertEquals(2, 1+1);
     }
+
 }
