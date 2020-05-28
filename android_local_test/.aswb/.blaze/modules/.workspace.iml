@@ -2,9 +2,10 @@
 <module external.system.id="Blaze" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="3">
+      <configuration version="3" platform="JVM 1.8" allPlatforms="JVM [1.8]">
         <compilerSettings />
         <compilerArguments>
+          <option name="jvmTarget" value="1.8" />
           <option name="pluginOptions">
             <array />
           </option>
@@ -42,12 +43,18 @@
     <orderEntry type="library" name="jdk_compiler_362444fa" level="project" />
     <orderEntry type="library" name="javac-9+181-r4173-1_362444fa" level="project" />
     <orderEntry type="library" name="appcompat-1.0.2_a0bc92a" level="project" />
+    <orderEntry type="library" name="classes_and_libs_merged_3494769c" level="project" />
+    <orderEntry type="library" name="lifecycle-common-2.0.0_f4b800af" level="project" />
+    <orderEntry type="library" name="classes_and_libs_merged_ea287f1c" level="project" />
+    <orderEntry type="library" name="classes_and_libs_merged_61d6793c" level="project" />
+    <orderEntry type="library" name="classes_and_libs_merged_40002b17" level="project" />
+    <orderEntry type="library" name="junit-4.1_cedf2ff8" level="project" />
     <orderEntry type="library" name="annotation-1.0.2_45ef87c2" level="project" />
-    <orderEntry type="library" name="classes_and_libs_merged_bada3d26" level="project" />
     <orderEntry type="library" name="assertj-core-3.12.1_834f1574" level="project" />
     <orderEntry type="library" name="libandroid-all_151da486" level="project" />
+    <orderEntry type="library" name="guava-20.0_6b4d0d2e" level="project" />
     <orderEntry type="library" name="robolectric-4.1_9add8f22" level="project" />
-    <orderEntry type="library" name="shadows-framework-4.1_d128710e" level="project" />
+    <orderEntry type="library" name="libtest_test_resources_2d2cb59c" level="project" />
     <orderEntry type="library" name="junit-4.12_3bcb4a99" level="project" />
     <orderEntry type="module" module-name="src.main.my_lib" exported="" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />

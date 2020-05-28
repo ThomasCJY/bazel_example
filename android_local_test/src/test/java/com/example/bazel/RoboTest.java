@@ -10,6 +10,6 @@ public class RoboTest {
 
     @Test
     public void justSimpleTest() {
-        Assert.assertEquals("(546) 789-4545", "(546) 789-4545");
+        Assert.assertEquals("(546) 789-4545", "(546) 78s9-4545");
     }
 }
