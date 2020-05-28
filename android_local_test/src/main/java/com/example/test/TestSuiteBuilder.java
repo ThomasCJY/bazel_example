@@ -4,11 +4,15 @@ import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Sets;
+
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import junit.framework.TestCase;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
@@ -108,7 +112,16 @@ public final class TestSuiteBuilder {
     }
 
     private static boolean isJunit4Test(Class<?> container) {
-        return container.isAnnotationPresent(RunWith.class);
+        if (container.isAnnotationPresent(RunWith.class)) return true;
+
+        // Some junit4 test doesn't have @Runwith annotation. In this case, we'll search for
+        // @Test annotation in its method list.
+        for (Method method: container.getMethods()) {
+            if (method.isAnnotationPresent(Test.class)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static boolean isJunit3Test(Class<?> container) {
