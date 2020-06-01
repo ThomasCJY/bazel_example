@@ -1,4 +1,4 @@
-package com.example.bazel;
+package com.example.bazel.internal;
 
 import com.example.test.ClasspathSuite;
 

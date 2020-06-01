@@ -5,7 +5,7 @@ kt_jvm_library(
     srcs = [
         "java/com/example/bazel/RoboTest.java",
         "java/com/example/bazel/SimpleJunitTest.java",
-        "java/com/example/bazel/BazelTestSuite.java",
+        "java/com/example/bazel/internal/BazelTestSuite.java",
         "java/com/example/bazel/KotlinTest.kt",
     ],
     deps = [
@@ -28,7 +28,7 @@ android_local_test(
     name = "main_activity_test",
     custom_package = "com.example.bazel",
     manifest = "AndroidManifest.xml",
-    test_class = "com.example.bazel.BazelTestSuite",
+    test_class = "com.example.bazel.internal.BazelTestSuite",
     runtime_deps = [":java_kt_tests"],
     deps = [
         ":test_test_resources",
