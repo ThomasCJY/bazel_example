@@ -13,6 +13,7 @@ android_local_test(
         "@maven//:junit_junit",
         "@maven//:org_assertj_assertj_core",
         "@maven//:org_robolectric_robolectric",
+        "@maven//:com_google_android_gms_play_services_ads_base",
         "@robolectric//bazel:android-all",
     ],
 )
