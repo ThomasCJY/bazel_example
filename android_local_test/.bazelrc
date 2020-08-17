@@ -1,0 +1,16 @@
+# Remove this line will output the correct error message
+build --config=android_workers
+
+build:android_workers --strategy=Javac=worker
+build:android_workers --strategy=Desugar=worker
+build:android_workers --strategy=KotlinCompile=worker
+build:android_workers --persistent_android_resource_processor
+build:android_workers --strategy=AARGenerator=sandboxed
+build:android_workers --worker_max_instances=2
+build:android_workers --worker_max_instances=KotlinCompile=8
+
+build --config=d8
+build:d8 --define=android_dexmerger_tool=d8_dexmerger
+build:d8 --define=android_incremental_dexing_tool=d8_dexbuilder
+build:d8 --nouse_workers_with_dexbuilder # https://github.com/bazelbuild/bazel/issues/10241
+build:d8 --incremental_dexing # to overwrite our default
