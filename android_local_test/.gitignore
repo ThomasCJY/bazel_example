@@ -1,3 +1,4 @@
-.aswb/.idea/**
+.aswb/*
 .ijwb/.idea/**
 .ijwb/.blaze/modules/.workspace.iml
+**/.DS_Store
