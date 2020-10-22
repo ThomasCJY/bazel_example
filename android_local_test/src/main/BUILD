@@ -10,5 +10,12 @@ android_library(
     deps = [
         artifact("androidx.appcompat:appcompat"),
         artifact("androidx.annotation:annotation"),
+        "@maven//:com_google_guava_guava"
     ],
+)
+
+android_binary(
+    name = "app",
+    manifest = "java/AndroidManifest.xml",
+    deps = [":my_lib"],
 )
