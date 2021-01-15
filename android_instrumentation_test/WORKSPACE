@@ -2,8 +2,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 android_sdk_repository(
     name = "androidsdk",
-    build_tools_version = "28.0.2",
-    api_level=28,
+    api_level = 30,
+    build_tools_version = "30.0.2",
 )
 
 #android_ndk_repository(
@@ -11,15 +11,22 @@ android_sdk_repository(
 #)
 
 RULES_JVM_EXTERNAL_TAG = "3.3"
+
 RULES_JVM_EXTERNAL_SHA = "d85951a92c0908c80bd8551002d66cb23c3434409c814179c0ff026b53544dab"
 
 http_archive(
     name = "rules_jvm_external",
-    strip_prefix = "rules_jvm_external-%s" % RULES_JVM_EXTERNAL_TAG,
     sha256 = RULES_JVM_EXTERNAL_SHA,
+    strip_prefix = "rules_jvm_external-%s" % RULES_JVM_EXTERNAL_TAG,
     url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG,
 )
+
 load("@rules_jvm_external//:defs.bzl", "maven_install")
+
+local_repository(
+    name = "bazel_rules_instrumentation",
+    path = "/home/tchen/Dev/spoon_instrumentation_rule",
+)
 
 maven_install(
     artifacts = [
@@ -70,10 +77,12 @@ http_archive(
 )
 
 load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
+
 # Creates a default toolchain config for RBE.
 # Use this as is if you are using the rbe_ubuntu16_04 container,
 # otherwise refer to RBE docs.
 rbe_autoconfig(name = "buildkite_config")
+
 rbe_autoconfig(name = "rbe_default")
 
 # RBE support for android_device and android_instrumentation_test on RBE.
