@@ -24,7 +24,7 @@ http_archive(
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 local_repository(
-    name = "bazel_rules_instrumentation",
+    name = "spoon_instrumentation_test",
     path = "/home/tchen/Dev/spoon_instrumentation_rule",
 )
 

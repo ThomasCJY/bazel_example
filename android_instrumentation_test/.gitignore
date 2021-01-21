@@ -4,3 +4,5 @@ bazel-testlogs
 bazel-android_instrumentation_test
 .aswb/**
 !.aswb/.bazelproject
+**/*.iml
+.idea/
