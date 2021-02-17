@@ -19,5 +19,5 @@ spoon_instrumentation_test(
     # Size must be large to accommodate for up to 900s test execution time
     size = "small",
     device_type = "local",  # pixel, pixel_c, nexus_4, generic_4_7, etc.
-    test_apk = ":greeter_test_app",
+    test_app = ":greeter_test_app",
 )
