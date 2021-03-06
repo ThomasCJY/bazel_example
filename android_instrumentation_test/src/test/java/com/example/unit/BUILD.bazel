@@ -1,0 +1,14 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+# name must match class name
+java_test(
+    name = "SimpleTest",
+    size = "small",
+    srcs = [
+        "SimpleTest.java",
+    ],
+    deps = [
+        artifact("junit:junit"),
+        "//src/main/java/com/example/bazel:util",
+    ],
+)
