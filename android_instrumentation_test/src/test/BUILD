@@ -12,12 +12,12 @@ android_binary(
 #    test_app = ":greeter_test_app",
 #)
 
-load("@spoon_instrumentation_test//:defs.bzl", "spoon_instrumentation_test")
-
-spoon_instrumentation_test(
-    name = "greeter_test_spoon",
-    # Size must be large to accommodate for up to 900s test execution time
-    size = "small",
-    device_type = "local",  # pixel, pixel_c, nexus_4, generic_4_7, etc.
-    test_app = ":greeter_test_app",
-)
+#load("@spoon_instrumentation_test//:defs.bzl", "spoon_instrumentation_test")
+#
+#spoon_instrumentation_test(
+#    name = "greeter_test_spoon",
+#    # Size must be large to accommodate for up to 900s test execution time
+#    size = "small",
+#    device_type = "local",  # pixel, pixel_c, nexus_4, generic_4_7, etc.
+#    test_app = ":greeter_test_app",
+#)
