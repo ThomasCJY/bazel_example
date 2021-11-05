@@ -1,5 +1,9 @@
 android_binary(
     name = "greeter_test_app",
+    assets = glob(
+        ["assets/**"],
+        exclude = ["assets/abc.txt", "**/.DS_Store"]),
+    assets_dir = "assets",
     custom_package = "com.example.bazel.test",
     instruments = "//src/main:greeter_app",
     manifest = "AndroidManifest.xml",

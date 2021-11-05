@@ -3,7 +3,7 @@
 build --host_force_python=PY2 
 build --experimental_google_legacy_api
 query --experimental_google_legacy_api
-
+build --persistent_android_resource_processor
 test --flaky_test_attempts=3
 
 # ------------------------
