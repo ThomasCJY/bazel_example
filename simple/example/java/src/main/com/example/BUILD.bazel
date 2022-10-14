@@ -1,0 +1,15 @@
+# Vanilla Java bin works when jvm_flags is applied with relative file path
+# ```cmd
+# bazelisk build //example/java/src/main/com/example:test_java_bin
+# bazel-bin/example/java/src/main/com/example/test_java_bin
+# ```
+# -> Data file exists! Content:example data2
+#
+# However, the data class will not be picked up correctly if the binary is passed through `--proguard_top="//example/java/src/main/com/example:test_java_bin"` flag
+java_binary(
+    name = "test_java_bin",
+    srcs = ["TestJavaBinary.java"],
+    main_class = "example.java.src.main.com.example.TestJavaBinary",
+    data = ["//data:data.txt"],
+    jvm_flags = ["-Ddata.path=data/data.txt"],
+)

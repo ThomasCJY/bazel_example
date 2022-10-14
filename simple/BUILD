@@ -1,13 +1,7 @@
-load("@rules_jvm_external//:defs.bzl", "artifact")
 
 android_library(
     name = "my_lib",
     exports = [
-        "@junit_junit//jar",  # alias to @maven//:junit_junit
-        "@maven//:android_arch_lifecycle_common",
-        "@maven//:android_arch_lifecycle_viewmodel",
-        "@maven//:androidx_test_espresso_espresso_web",
-        "@maven//:com_android_support_design",
     ],
 )
 
@@ -16,4 +10,8 @@ android_binary(
     custom_package = "com.example.bazel",
     manifest = "AndroidManifest.xml",
     deps = [":my_lib"],
+    # if proguard specs are commented out, `bazelisk build //:my_app` will pass
+    proguard_specs = [
+        "proguard-rules.pro",
+    ],
 )

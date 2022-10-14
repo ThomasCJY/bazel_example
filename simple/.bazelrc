@@ -1,0 +1,1 @@
+build --proguard_top="//example/java/src/main/com/example:test_java_bin"
